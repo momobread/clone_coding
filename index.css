@@ -3,6 +3,11 @@
 :root{
     --color_gray :#f5f7f8;
     --color_test : #ecb0da;
+    --color_test2: rgb(65, 214, 177);
+    --color_w : #ffffff;
+    --color_Naver : #03c75a;
+    --color_border : #e3e5e8;
+    
 }
 
 /* .header_nav{
@@ -111,8 +116,10 @@
 .content_box{
     width :1280px;
     height: 1000px;
-    background-color: var(--color_test); 
+    /* background-color: var(--color_test);  */
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
 }
 .ad_content{
     width: 830px;
@@ -121,7 +128,68 @@
 }
 .ad_content>span>img{
 width: 830px;
-    height: 130px;
-    border: 1px solid var(--color_gray);
+    height: 420px;
+    border: 2px solid var(--color_border);
     border-radius: 10px;
+}
+
+.login_box{
+    width: 420px;
+    height: 160px;
+    background-color: var(--color_w);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--color_border);
+}
+
+
+.login_box > a{
+    background-color: var(--color_Naver);
+    width: 380px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+   
+    
+}
+.login_box > a>span{
+   color:var(--color_w);
+   margin-right:10px;
+   
+}
+.login_box > a :nth-child(1){
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 1px 1px ;
+}
+.login_box > a :nth-child(2){
+    font-size: 17px; 
+    font-weight: 300; 
+}
+
+.login_box :nth-child(1){
+    font-size: 15px;
+}
+
+
+.login_box_bottom >span{
+    width: 100px;
+    border-right: 1px solid var(--color_border);
+    padding: 0px 10px 0px 5px;
+    background-color: var(--color_test);
+}
+.login_box_bottom{
+    margin-top:15px;
+    font-size: 14px;
+}
+.login_box_bottom:nth-child(1){
+    background-color: #03c75a;
+    height: 100pz;
 }
