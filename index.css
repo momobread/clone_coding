@@ -121,17 +121,63 @@
     display: flex;
     justify-content: space-between;
 }
+.content_box_leftside{
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--color_test); */
+}
 .ad_content{
     width: 830px;
     height: 130px;
+    border: 1px solid var(--color_border);
+    border-radius: 10px;
+    margin-bottom: 15px;
     
+} 
+.ad_content>a>img{
+    width: 830px;
+    height: 130px;
+    border-radius: 10px;
 }
-.ad_content>span>img{
+
+/* .ad_content>span>img{
 width: 830px;
     height: 420px;
     border: 2px solid var(--color_border);
     border-radius: 10px;
+}  */
+
+.news_content{
+    width: 830px;
+    height: 430px;
+    border: 1px solid var(--color_border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
+.news_content > div:nth-of-type(1),.news_content > div:nth-of-type(4){
+ border-radius:10px;   
+}
+
+
+.news_content_header{
+   flex-grow: 1;
+    background-color: var(--color_test);
+}
+.news_content_nav{
+    flex-grow: 1;
+    background-color: var(--color_test2);
+}
+.news_content_forms{
+    flex-grow: 5;
+    background-color: var(--color_test);
+    
+}
+.news_content_list{
+    flex-grow: 1;
+    background-color: var(--color_test2);
+}
+
 
 .login_box{
     width: 420px;
@@ -181,15 +227,24 @@ width: 830px;
 
 .login_box_bottom >span{
     width: 100px;
-    border-right: 1px solid var(--color_border);
     padding: 0px 10px 0px 5px;
-    background-color: var(--color_test);
+    /* background-color: var(--color_test); */
 }
 .login_box_bottom{
     margin-top:15px;
     font-size: 14px;
 }
-.login_box_bottom:nth-child(1){
+
+/* 궁금해궁금해 */
+/* .login_box_bottom:nth-child(1){
     background-color: #03c75a;
-    height: 100pz;
+    height: 100px; 
+} */
+/* 왜 first child가 안먹히지? */
+
+.login_box_bottom > span:nth-of-type(-n+2){
+    border-right: 1px solid var(--color_border);
 }
+/* 이건 또 먹히네 */
+
+
