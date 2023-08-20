@@ -7,6 +7,9 @@
     --color_w : #ffffff;
     --color_Naver : #03c75a;
     --color_border : #e3e5e8;
+    --color_text : #909aab;
+    --color_text_click : rgba(8,8,8,.5);
+
     
 }
 
@@ -154,6 +157,7 @@ width: 830px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+   
 }
 .news_content > div:nth-of-type(1),.news_content > div:nth-of-type(4){
  border-radius:10px;   
@@ -161,22 +165,32 @@ width: 830px;
 
 
 .news_content_header{
-   flex-grow: 1;
-    background-color: var(--color_test);
+   /* flex-grow: 1; */
+    /* background-color: var(--color_test); */
+    width:830px;
+    height: 60px;
+  
 }
 .news_content_nav{
-    flex-grow: 1;
     background-color: var(--color_test2);
+    width:830px;
+    height: 50px;
+  
 }
 .news_content_forms{
-    flex-grow: 5;
     background-color: var(--color_Naver);
     position: relative;
-    
+    width:830px;
+    height: 225px;
+   
+   
 }
 .news_content_list{
-    flex-grow: 1;
     background-color: var(--color_border);
+    width:830px;
+    height: 60px;
+   
+    
 }
 
 
@@ -263,9 +277,28 @@ width: 830px;
 
 .news_content_header > button:nth-of-type(-n+5){
     border: none;
+    color : var(--color_text);
     background-color: var(--color_w);
+    font-size: 16px;
+    margin: 10px -2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.news_content_header > button:nth-of-type(-n+5):hover{
+    text-decoration: underline;
 
 }
+.news_content_header > span:nth-of-type(-n+4){
+    color: var(--color_text);
+    text-align: center;
+    
+}
+.news_content_header > span:nth-of-type(1){
+    font-size : 5px;
+
+}
+
 
 .A{
     position: absolute;
@@ -277,7 +310,9 @@ width: 830px;
     /* top: 10px;
     left :50px; */
     /* pointer-events: none; */
+    
 }
+
 
 .B{
     position: absolute;
@@ -327,4 +362,37 @@ width: 830px;
     z-index: 1;
     display: none;
     pointer-events: none;
+}
+
+.AA>div{
+    width : 130px;
+    height: 55px;
+    background-color: var(--color_w);
+    border: 1px solid var(--color_border);
+    text-align: center;
+    
+
+}
+.AA>div:nth-of-type(1){
+    border-top-left-radius: 7px;
+}
+.AA>div:nth-of-type(6){
+    border-top-right-radius: 7px;
+}
+.AA>div:nth-of-type(19){
+    border-bottom-left-radius: 7px;
+}
+.AA>div:nth-of-type(24){
+    border-bottom-right-radius: 7px;
+}
+
+.AA{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    align-content: center; 
+;
+    
 }

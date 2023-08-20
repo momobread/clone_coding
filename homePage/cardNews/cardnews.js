@@ -6,12 +6,18 @@ const C = document.getElementById('C');
 const D = document.getElementById('D');
 const E = document.getElementById('E');
 
+const news_news = document.getElementById('news');
+const news_mediaEdit = document.getElementById('mediaEdit');
+const news_entertain = document.getElementById('entertain');
+const news_sports = document.getElementById('sports');
+const news_economics = document.getElementById('economics');
 
 function typeSearch(type) {
     let idValue = type
     if (idValue == "news" || idValue == "mediaEdit" ||
     idValue == "entertain"||idValue == "sports" || idValue == "economics") {
         console.log("제대로 선택함")
+        fontColor(idValue);
         cardSelect(idValue);
         
     }
@@ -32,6 +38,52 @@ function test(type) {
     } else if (type == "E") {
         console.log("버튼 E 입니다");
     }
+}
+
+
+
+function fontColor(type){
+    // type.style.color="black"
+    // 이게 안되네 ㄷㄷ
+
+    if (type == "news") {
+        console.log(news);
+        news_news.style.color="#000000";
+        news_mediaEdit.style.color="#909aab";
+        news_entertain.style.color="#909aab";
+        news_sports.style.color="#909aab";
+        news_economics.style.color="#909aab";
+    }else if(type =="mediaEdit") {
+        news_news.style.color="#909aab";
+        news_mediaEdit.style.color="black";
+        news_entertain.style.color="#909aab";
+        news_sports.style.color="#909aab";
+        news_economics.style.color="#909aab";
+        console.log(type);
+    } else if (type == "entertain"){
+        news_news.style.color="#909aab";
+        news_mediaEdit.style.color="#909aab";
+        news_entertain.style.color="black";
+        news_sports.style.color="#909aab";
+        news_economics.style.color="#909aab";
+        console.log(type);
+    }  
+    else if(type=="sports") {
+        news_news.style.color="#909aab";
+        news_mediaEdit.style.color="909aab";
+        news_entertain.style.color="#909aab";
+        news_sports.style.color="black";
+        news_economics.style.color="#909aab";
+        console.log(type);
+    }else if(type=="economics"){
+        news_news.style.color="#909aab";
+        news_mediaEdit.style.color="909aab";
+        news_entertain.style.color="#909aab";
+        news_sports.style.color="#909aab";
+        news_economics.style.color="black";
+        console.log(type);
+    }
+
 }
 
 function cardSelect(type) {
@@ -116,6 +168,7 @@ function cardDisplay(type){
 }
 
 
+// cardContent=[];
 
 
 
