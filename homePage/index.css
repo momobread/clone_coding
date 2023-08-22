@@ -1,5 +1,6 @@
 @import "./reset.css";
 
+
 :root{
     --color_gray :#f5f7f8;
     --color_test : #ecb0da;
@@ -175,7 +176,7 @@ width: 830px;
   
 }
 .news_content_nav{
-    background-color: var(--color_test2);
+    background-color: var(--color_w);
     width:830px;
     height: 60px;
   
@@ -278,7 +279,8 @@ width: 830px;
     border-radius: 8px;
 }
 .news_content_header_nav{
-    margin-left: 10px;
+    margin-left: 20px;
+    width: 790px;
 }
 .news_content_header_nav > button:nth-of-type(-n+5){
     border: none;
@@ -405,9 +407,7 @@ width: 830px;
     justify-content: center;
     align-items: center;
 }
-.news_list_wrap > div:hover{
-    
-}
+
 .news_list_wrap > div>a>img{
 height: 20px;
 
@@ -426,11 +426,34 @@ height: 20px;
     background-color: var(--color_nav_bg);
     border-radius: 7px;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
 }
 .news_content_nav_wrap>div:nth-child(-n+5){
     margin-right: 20px;
+}
+
+.news_content_nav_left{
+    display: flex;
+   
+}
+.news_content_nav_left>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.news_content_nav_left>div:nth-of-type(1){
+    margin-left:15px ;
+
+}
+
+
+.news_content_nav_left>div>span:nth-of-type(1),
+.news_content_nav_left>div>span:nth-of-type(2){
+    color: var(--color_text);
+    font-size: 12px;
+    margin: 0px 7px;
+
 }
 
 .nav_scroll_container{

@@ -280,6 +280,6 @@ function autoScroll(value){
     }
 
 }
-    setInterval(() => autoScroll(16), 3000);
+    setInterval(() => autoScroll(16), 1000);
 
 
