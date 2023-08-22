@@ -50,63 +50,189 @@
             </div>
             <div class="news_content">
                 <div class="news_content_header">  <!--js 사용 예정중  -->
-                    <button id="news" onClick="typeSearch(this.id)">뉴스스탠스</button>
-                    <span>°</span>
-                    <button id="mediaEdit" onClick="typeSearch(this.id)">언론사편집</button>
-                    <span>/</span>
-                    <button id="entertain" onClick="typeSearch(this.id)">엔터</button>
-                    <span>/</span>
-                    <button id="sports" onClick="typeSearch(this.id)">스포츠</button>
-                    <span>/</span>
-                    <button id="economics" onClick="typeSearch(this.id)">경제</button>
+                    <div class="news_content_header_nav">    
+                        <button id="news" onClick="typeSearch(this.id)">뉴스스탠스</button>
+                        <span>°</span>
+                        <button id="mediaEdit" onClick="typeSearch(this.id)">언론사편집</button>
+                        <span>/</span>
+                        <button id="entertain" onClick="typeSearch(this.id)">엔터</button>
+                        <span>/</span>
+                        <button id="sports" onClick="typeSearch(this.id)">스포츠</button>
+                        <span>/</span>
+                        <button id="economics" onClick="typeSearch(this.id)">경제</button>
+                    </div>
                 </div>
                 <div class="news_content_nav">
-                    <!-- 배열이 들어갈 자리입니다 -->
+                    <div class="news_content_nav_wrap">
+                        <div>
+                            <a><span>전체언론사</span></a>
+                        </div>
+                        <div>
+                            <a><span>연합뉴스</span></a>
+                        
+                        </div>
+                        <div class="nav_scroll_container">
+                            <div id ="nav1">❤️</div>
+                            <div id ="nav2">1나는 왜 항상 배가고플까</div>
+                            <div id ="nav3">2인생은 힘들어,,,,,</div>
+                            <div id ="nav4">3꿔바로우 땡긴다</div>
+                            <div id ="nav5">4나는 왜 항상 배가고플까</div>
+                            <div id ="nav6">5인생은 힘들어,,,,,</div>
+                            <div id ="nav7">6꿔바로우 땡긴다</div>
+                            <div id ="nav8">👍</div>
+                            <!-- 미리 만들어놓고 로테이션 시킨다 O -->
+                            <!-- 1번 div 보여주고 특정시간 지나면 2번 div -->
+                            <!-- 그러면서 1번 div는 마지막 div의 다음으로 붙인다 -->
+                            <!-- 계속 반복 -->
+                        </div>
+                        <div>
+                            <a><span>뉴스스탠드</span></a>
+                            <a><span>뉴스홈</span></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="news_content_forms">
-                    <div id="A" class="A">
-                        <div class="AA">
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
-                        <div class="">a</div>
+                    <div id="news_list" class="news_list">
+                        <div class="news_list_wrap" id="news_list_wrap" >
+                            <div class="news_list_form1">
+                                <a class="news_list_form1_link" href="https://newsstand.naver.com/?list&pcode=002">
+                                    <img src="../picture/news_content/002.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form2">
+                                <a class="news_list_form2_link" href="https://newsstand.naver.com/?list&pcode=003">
+                                    <img src="../picture/news_content/003 (1).png">
+                                </a>
+                            </div>
+                            <div class="news_list_form3">
+                                <a class="news_list_form3_link" href="https://newsstand.naver.com/?list&pcode=005">
+                                    <img src="../picture/news_content/005.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form4">
+                                <a class="news_list_form4_link" href="https://newsstand.naver.com/?list&pcode=006">
+                                    <img src="../picture/news_content/006.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form5">
+                                <a class="news_list_form5_link" href="https://newsstand.naver.com/?list&pcode=008">
+                                    <img src="../picture/news_content/008.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form6">
+                                <a class="news_list_form6_link" href="https://newsstand.naver.com/?list&pcode=009">
+                                    <img src="../picture/news_content/009.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form7">
+                                <a class="news_list_form7_link" href="https://newsstand.naver.com/?list&pcode=014">
+                                    <img src="../picture/news_content/014.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form8">
+                                <a class="news_list_form8_link" href="https://newsstand.naver.com/?list&pcode=015">
+                                    <img src="../picture/news_content/015.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form9">
+                                <a class="news_list_form9_link" href="https://newsstand.naver.com/?list&pcode=016">
+                                    <img src="../picture/news_content/016.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form10">
+                                <a class="news_list_form10_link" href="https://newsstand.naver.com/?list&pcode=020">
+                                    <img src="../picture/news_content/020.png">
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="news_list_form11">
+                                <a class="news_list_form11_link" href="https://newsstand.naver.com/?list&pcode=022">
+                                    <img src="../picture/news_content/022.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form12">
+                                <a class="news_list_form12_link" href="https://newsstand.naver.com/?list&pcode=029">
+                                    <img src="../picture/news_content/029.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form13">
+                                <a class="news_list_form13_link" href="https://newsstand.naver.com/?list&pcode=030">
+                                    <img src="../picture/news_content/030 (1).png">
+                                </a>
+                            </div>
+                            <div class="news_list_form14">
+                                <a class="news_list_form14_link" href="https://newsstand.naver.com/?list&pcode=031">
+                                    <img src="../picture/news_content/031.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form15">
+                                <a class="news_list_form15_link" href="https://newsstand.naver.com/?list&pcode=032">
+                                    <img src="../picture/news_content/032.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form16">
+                                <a class="news_list_form16_link" href="https://newsstand.naver.com/?list&pcode=038">
+                                    <img src="../picture/news_content/038.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form17">
+                                <a class="news_list_form17_link" href="https://newsstand.naver.com/?list&pcode=044">
+                                    <img src="../picture/news_content/044.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form18">
+                                <a class="news_list_form18_link" href="https://newsstand.naver.com/?list&pcode=047">
+                                    <img src="../picture/news_content/047.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form19">
+                                <a class="news_list_form19_link" href="https://newsstand.naver.com/?list&pcode=052">
+                                    <img src="../picture/news_content/052.png">
+                                </a>
+                            </div>   
+                            <div class="news_list_form20">
+                                <a class="news_list_form20_link" href="https://newsstand.naver.com/?list&pcode=055">
+                                    <img src="../picture/news_content/055.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form21">
+                                <a class="news_list_form21_link" href="https://newsstand.naver.com/?list&pcode=056">
+                                    <img src="../picture/news_content/056.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form22">
+                                <a class="news_list_form22_link" href="https://newsstand.naver.com/?list&pcode=076">
+                                    <img src="../picture/news_content/076.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form23">
+                                <a class="news_list_form23_link" href="https://newsstand.naver.com/?list&pcode=079">
+                                    <img src="../picture/news_content/079.png">
+                                </a>
+                            </div>
+                            <div class="news_list_form24">
+                                <a class="news_list_form24_link" href="https://newsstand.naver.com/?list&pcode=117">
+                                    <img src="../picture/news_content/117.png">
+                                </a>
+                            </div>
+
                         <!-- <button id="A" onClick="test(this.id)">A의 가</button> -->
                         </div>
                     </div>
-                    <div id="B" class="B">
+                    <div id="mediaEdit_list" class="mediaEdit_list">
                         <spna>가가가가가가</spna>
                         요요요요ㅛ
                         <button id="B" onClick="test(this.id)">B의 나</button>
                     </div>
-                    <div id="C" class="C">
+                    <div id="entertain_list" class="entertain_list">
                         <spna>나나나나나</spna>
                         <button id="C" onClick="test(this.id)">C의 다</button>
                     </div>
-                    <div id="D" class="D">
+                    <div id="sports_list" class="sports_list">
                         <spna>가가가가가가</spna>
                         <button id="D" onClick="test(this.id)">D의 라</button>
                     </div>
-                    <div id="E" class="E">
+                    <div id="economics_list" class="economics_list">
                         <spna>가가가가가가</spna>
                         <button id="E" onClick="test(this.id)">E의 마</button>
                     </div>
@@ -114,9 +240,7 @@
                 <div class="news_content_list">list</div>
             </div>
             <div class="shopping_content"></div>
-            <div class="etc_content">
-                <div></div>
-            </div>
+            <div class="etc_content"></div>
         </div>
         <div class="content_box_rightside">
             <div class="login_box">
@@ -130,13 +254,12 @@
                     <span class="search_pw"><a>비밀번호 찾기</a></span>
                     <span class="join"><a>회원가입</a></span>
                 </div>
-                <div class="small_ad">
+            </div>  
+            <div class="small_ad">
                 <a href="https://www.nespresso.com/kr/ko/vertuo-system-2023?utm_source=Paid-Display&utm_medium=BAE&utm_content=BAE_TBWA_VET_IN_NV_OT_mid-mf1844__CPM_DIR__EN__DisplayBanner_V1_LCL_DNP_____rolling-barcodebrewing1&utm_campaign=KR_2023-Jul_B2C_INT_G0011-VERTUOReLaunch_One-shot_VER_MAC_No_G0011-VertuoRepositioning">
                     <img src="https://ssl.pstatic.net/melona/libs/1456/1456269/cf48f96a131e9497902b_20230718100502473.jpg">
                 </a>
-            </div>
-            </div>  
-                                                                                                                                                            
+            </div>                                                                                                                                                
                 <!-- https://www.nespresso.com/kr/ko/vertuo-system-2023?utm_source=Paid-Display&utm_medium=BAE&utm_content=BAE_TBWA_VET_IN_NV_OT_mid-mf1844__CPM_DIR__EN__DisplayBanner_V1_LCL_DNP_____rolling-barcodebrewing1&utm_campaign=KR_2023-Jul_B2C_INT_G0011-VERTUOReLaunch_One-shot_VER_MAC_No_G0011-VertuoRepositioning -->
                 <!-- https://ssl.pstatic.net/melona/libs/1456/1456269/cf48f96a131e9497902b_20230718100502473.jpg -->
         </div>
