@@ -1,4 +1,4 @@
-//클릭이 어디로 되어있나 기준으로 할껀데
+//클릭이 어디로 되어있나 기준으로 할껀데der_search
 // const news
 const news_list = document.getElementById('news_list');
 const mediaEdit_list = document.getElementById('mediaEdit_list');
@@ -6,6 +6,7 @@ const entertain_list = document.getElementById('entertain_list');
 const sports_list = document.getElementById('sports_list');
 const economics_list = document.getElementById('economics_list');
 
+// 뉴스contents header의 클릭시 값 가져와서 비교후 nav랑 contents 보여주기
 const news_news = document.getElementById('news');
 const news_mediaEdit = document.getElementById('mediaEdit');
 const news_entertain = document.getElementById('entertain');
@@ -13,9 +14,26 @@ const news_sports = document.getElementById('sports');
 const news_economics = document.getElementById('economics');
 
 
+
+const news_content_nav_wrap = document.getElementById('news_content_nav_wrap');
+const news_content_nav_wrap2 = document.getElementById('news_content_nav_wrap2');
+const news_content_nav_wrap3 = document.getElementById('news_content_nav_wrap3');
+const news_content_nav_wrap4 = document.getElementById('news_content_nav_wrap4');
+const news_content_nav_wrap5 = document.getElementById('news_content_nav_wrap5');
+
+const search_content = document.getElementById('search_content');
+
+
+
+
+
 const news_list_form = [];
 const news_list_form_link = [];
 const news_list_form_href = [];
+
+
+
+search_content.focus();
 
 //각각의 변수 만들기 / 큰폼[div](addeventlistener),
 // 작은폼[a](원본그림 보여주기/왜냐하면 a안에 img가 있으니까),
@@ -148,6 +166,7 @@ function fontColor(type) {
     }
 
 }
+// news nav와 form 둘다 none 설정
 
 function cardSelect(type) {
     console.log("안뇽");
@@ -163,6 +182,12 @@ function cardSelect(type) {
         entertain_list.style.pointerEvents = "none";
         sports_list.style.pointerEvents = "none";
         economics_list.style.pointerEvents = "none";
+        news_content_nav_wrap.style.pointerEvents="auto";
+        news_content_nav_wrap2.style.pointerEvents="none";
+        news_content_nav_wrap3.style.pointerEvents="none";
+        news_content_nav_wrap4.style.pointerEvents="none";
+        news_content_nav_wrap5.style.pointerEvents="none";
+
         cardDisplay(type);
     } else if (type == "mediaEdit") {
         news_list.style.pointerEvents = "none";
@@ -170,6 +195,11 @@ function cardSelect(type) {
         entertain_list.style.pointerEvents = "none";
         sports_list.style.pointerEvents = "none";
         economics_list.style.pointerEvents = "none";
+        news_content_nav_wrap.style.pointerEvents="none";
+        news_content_nav_wrap2.style.pointerEvents="auto";
+        news_content_nav_wrap3.style.pointerEvents="none";
+        news_content_nav_wrap4.style.pointerEvents="none";
+        news_content_nav_wrap5.style.pointerEvents="none";
         cardDisplay(type);
     } else if (type == "entertain") {
         news_list.style.pointerEvents = "none";
@@ -177,6 +207,11 @@ function cardSelect(type) {
         entertain_list.style.pointerEvents = "auto";
         sports_list.style.pointerEvents = "none";
         economics_list.style.pointerEvents = "none";
+        news_content_nav_wrap.style.pointerEvents="none";
+        news_content_nav_wrap2.style.pointerEvents="none";
+        news_content_nav_wrap3.style.pointerEvents="auto";
+        news_content_nav_wrap4.style.pointerEvents="none";
+        news_content_nav_wrap5.style.pointerEvents="none";
         cardDisplay(type);
     } else if (type == "sports") {
         news_list.style.pointerEvents = "none";
@@ -184,6 +219,11 @@ function cardSelect(type) {
         entertain_list.style.pointerEvents = "none";
         sports_list.style.pointerEvents = "auto";
         economics_list.style.pointerEvents = "none";
+        news_content_nav_wrap.style.pointerEvents="none";
+        news_content_nav_wrap2.style.pointerEvents="none";
+        news_content_nav_wrap3.style.pointerEvents="none";
+        news_content_nav_wrap4.style.pointerEvents="auto";
+        news_content_nav_wrap5.style.pointerEvents="none";
         cardDisplay(type);
     } else if (type == "economics") {
         news_list.style.pointerEvents = "none";
@@ -191,9 +231,16 @@ function cardSelect(type) {
         entertain_list.style.pointerEvents = "none";
         sports_list.style.pointerEvents = "none";
         economics_list.style.pointerEvents = "auto";
+        news_content_nav_wrap.style.pointerEvents="none";
+        news_content_nav_wrap2.style.pointerEvents="none";
+        news_content_nav_wrap3.style.pointerEvents="none";
+        news_content_nav_wrap4.style.pointerEvents="none";
+        news_content_nav_wrap5.style.pointerEvents="auto";
         cardDisplay(type);
     }
 }
+// news nav와 form 둘다 none 설정
+
 function cardDisplay(type) {
     if (type == "news") {
         news_list.style.display = "block";
@@ -202,6 +249,12 @@ function cardDisplay(type) {
         sports_list.style.display = "none";
         economics_list.style.display = "none";
 
+        news_content_nav_wrap.style.display="flex";
+        news_content_nav_wrap2.style.display="none";
+        news_content_nav_wrap3.style.display="none";
+        news_content_nav_wrap4.style.display="none";
+        news_content_nav_wrap5.style.display="none";
+
     } else if (type == "mediaEdit") {
         news_list.style.display = "none";
         mediaEdit_list.style.display = "block";
@@ -209,24 +262,47 @@ function cardDisplay(type) {
         sports_list.style.display = "none";
         economics_list.style.display = "none";
 
+        news_content_nav_wrap.style.display="none";
+        news_content_nav_wrap2.style.display="flex";
+        news_content_nav_wrap3.style.display="none";
+        news_content_nav_wrap4.style.display="none";
+        news_content_nav_wrap5.style.display="none";
+
     } else if (type == "entertain") {
         news_list.style.display = "none";
         mediaEdit_list.style.display = "none";
         entertain_list.style.display = "block";
         sports_list.style.display = "none";
         economics_list.style.display = "none";
+
+        news_content_nav_wrap.style.display="none";
+        news_content_nav_wrap2.style.display="none";
+        news_content_nav_wrap3.style.display="flex";
+        news_content_nav_wrap4.style.display="none";
+        news_content_nav_wrap5.style.display="none";
     } else if (type == "sports") {
         news_list.style.display = "none";
         mediaEdit_list.style.display = "none";
         entertain_list.style.display = "none";
         sports_list.style.display = "block";
         economics_list.style.display = "none";
+
+        news_content_nav_wrap.style.display="none";
+        news_content_nav_wrap2.style.display="none";
+        news_content_nav_wrap3.style.display="none";
+        news_content_nav_wrap4.style.display="flex";
+        news_content_nav_wrap5.style.display="none";
     } else if (type == "economics") {
         news_list.style.display = "none";
         mediaEdit_list.style.display = "none";
         entertain_list.style.display = "none";
         sports_list.style.display = "none";
         economics_list.style.display = "block";
+        news_content_nav_wrap.style.display="none";
+        news_content_nav_wrap2.style.display="none";
+        news_content_nav_wrap3.style.display="none";
+        news_content_nav_wrap4.style.display="none";
+        news_content_nav_wrap5.style.display="flex";
     }
 }
 
@@ -259,12 +335,12 @@ let scrollCount = 0;
 function autoScroll(value){
     scrollCount += value;
     nav_scroll_container.scrollTop = scrollCount;
-/// div한줄 height가 16이기 떄문에 3초당 16씩 내리면 됨
+/// div한줄 height가 30이기 떄문에 3초당 30씩 내리면 됨
     // if(nav_scroll_container.s)/
 
-    if(scrollCount == 16){
+    if(scrollCount == 30){
         scrollCount =0; 
-        //계속 16height만큼 일정하게 늘어나게 하기위해 원래 가진 스크롤벨류 초기화
+        //계속 30height만큼 일정하게 늘어나게 하기위해 원래 가진 스크롤벨류 초기화
         
         //그전 div 복사한것을 마지막 div에 붙여 로테이션 시키기
         console.log(navList.firstElementChild);
@@ -280,6 +356,12 @@ function autoScroll(value){
     }
 
 }
-    setInterval(() => autoScroll(16), 1000);
 
+// function autoFocus(){
+//     
+// }
+
+
+    setInterval(() => autoScroll(30), 3000);
+    // setInterval()
 

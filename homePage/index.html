@@ -7,10 +7,10 @@
     <link href="./index.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
+    <!-- header입니다 -->
     <div class="header">
         <div class="header_nav">
-            <span><img src="../picture/header/header_nav_bar_icon.png"></span>
+            <span class="Test"><img src="../picture/header/header_nav_bar_icon.png"></span>
                 <div class="header_nav_blank"></div>
                 <span><img src="../picture/header/header_pay_icon.png"></span>
                 <span><img src="../picture/header/header_nav_bell_icon.png"></span>
@@ -19,7 +19,7 @@
         <div class="header_search">
             <div class="header_search_line">
                 <span><img src="../picture/header/header_NaverLogo_icon.png"></span>
-                <input type="text" placeholder="">
+                <input type="text" placeholder="검색어를 입력해주세요" id="search_content">
                 <span><img src=""></span>
                 <span><img src=""></span>
                 <span><img src="../picture/header/header_search_icon.png"></span>
@@ -40,15 +40,16 @@
                 <div class="blank"></div>   
         </div>
     </div>
-
-    <div class="content_box">
+    <!-- content입니다 sector -->
+    <div class="content_box">  <!-- 부모 -->        
         <div class="content_box_leftside">
+            <div class="Test">
             <div class="ad_content">
                 <a id="ad_content" href="https://fifaonline4.nexon.com/main/index">
                     <img src="https://ssl.pstatic.net/melona/libs/1460/1460489/ebf3cb1854bfa4336110_20230811155852897.jpg"/>
                 </a>
             </div>
-            <div class="news_content">
+            <div class="news_content">  <!-- 또다른 부모 -->               
                 <div class="news_content_header">  <!--js 사용 예정중  -->
                     <div class="news_content_header_nav">    
                         <button id="news" onClick="typeSearch(this.id)">뉴스스탠스</button>
@@ -62,8 +63,8 @@
                         <button id="economics" onClick="typeSearch(this.id)">경제</button>
                     </div>
                 </div>
-                <div class="news_content_nav">
-                    <div class="news_content_nav_wrap">
+                <div class="news_content_nav"><!-- 또다른 부모 -->  
+                    <div class="news_content_nav_wrap" id ="news_content_nav_wrap">
                         <div class="news_content_nav_left">
                             <div>
                                 <a><span>전체언론사</span></a>
@@ -72,19 +73,31 @@
                                 <span>°</span>
                             </div>
                             <div class="nav_scroll_container">
-                                <div id ="nav1">❤️</div>
-                                <div id ="nav2">1나는 왜 항상 배가고플까</div>
-                                <div id ="nav3">2인생은 힘들어,,,,,</div>
-                                <div id ="nav4">3꿔바로우 땡긴다</div>
-                                <div id ="nav5">4나는 왜 항상 배가고플까</div>
-                                <div id ="nav6">5인생은 힘들어,,,,,</div>
-                                <div id ="nav7">6꿔바로우 땡긴다</div>
-                                <div id ="nav8">👍</div>
+                                <div id ="nav1" onclick="location.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                    "후쿠시마 오염수 방류, 내일 오후 1시 시작 조율중"...
+                                </div>
+                                <div id ="nav2" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                    "의경 2년 만에 부활하나…'인력난' 일선 경찰관들 반색"...
+                                </div>
+                                <div id ="nav3" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                    '신림동 흉기난동' 조선 "피해망상에 공격…살해 고의"...</div>
+                                <div id ="nav4" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                    "과천 정부청사서 법무부 직원 숨진 채 발견…경찰 수사"...
+                                </div>
+                                <div id ="nav5" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                사법입원제 도입 검토…범죄피해자 치료비 지원”...</div>
+                                <div id ="nav6" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                   </div>
+                                <div id ="nav7" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                  "교도통신 "후쿠시마 오염수 방류, 내일"...</div>
+                                <div id ="nav8" onclick="loaction.href='https://news.naver.com/main/list.naver?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y&aid=0014147142'">
+                                    "한덕수 “중증정신질환자 사법입원제 도입 검토"...</div>
                             <!-- 미리 만들어놓고 로테이션 시킨다 O -->
                             <!-- 1번 div 보여주고 특정시간 지나면 2번 div -->
                             <!-- 그러면서 1번 div는 마지막 div의 다음으로 붙인다 -->
                             <!-- 계속 반복 -->
                             </div>
+
                         </div>
                         <div>
                             <a><span>뉴스스탠드</span></a>
@@ -92,8 +105,20 @@
                             <a><span>뉴스홈</span></a>
                         </div>
                     </div>
+                    <div class="news_content_nav_wrap2" id ="news_content_nav_wrap2">
+                        <button id="B" onClick="test(this.id)">B의 나</button>
+                    </div>
+                    <div class="news_content_nav_wrap3" id ="news_content_nav_wrap3">
+                        <button id="C" onClick="test(this.id)">C의 다</button>
+                    </div>
+                    <div class="news_content_nav_wrap4" id ="news_content_nav_wrap4">
+                        <button id="D" onClick="test(this.id)">D의 라</button>
+                    </div>
+                    <div class="news_content_nav_wrap5" id ="news_content_nav_wrap5">
+                        <button id="E" onClick="test(this.id)">E의 마</button>
+                    </div>
                 </div>
-                <div class="news_content_forms">
+                <div class="news_content_forms"> <!-- 또다른 부모 -->  
                     <div id="news_list" class="news_list">
                         <div class="news_list_wrap" id="news_list_wrap" >
                             <div class="news_list_form1">
@@ -239,10 +264,183 @@
                         <button id="E" onClick="test(this.id)">E의 마</button>
                     </div>
                 </div>
-                <div class="news_content_list">list</div>
+                <div class="news_content_list"> <!-- 또다른 부모 -->  
+                    <button><</button>
+                        <span>언론사</span>
+                        <span>더보기</span>
+                        <span><a>1</a>/<a>4</a></span>
+                    <button>></button>
+                </div>
             </div>
-            <div class="shopping_content"></div>
+
+            <div class="shopping_box">
+                <div class="shopping_nav">
+                    <div class="shopping_nav_wrap">
+                        <a>쇼핑</a>
+                        <span>/</span>
+                        <a>맨즈</a>
+                        <span>/</span>
+                        <a>원쁠딜</a>
+                        <span>/</span>
+                        <a>쇼핑라이브</a>
+                    </div>
+                </div>
+                <div class="shopping_small_nav">
+                    <div class="shopping_small_nav_b_wrap">
+                        <div class="shopping_small_nav_wrap_1">
+                            <span>오늘의혜택</span>
+                            <span>AUCTION</span>
+                            <a>LG생활건강 특별한 득템찬스! <span>누구나 20%쿠폰</span>받아요!</a>
+                        </div>
+                        <div class="shopping_small_nav_wrap_2">
+                            <span>1</span>
+                            <span>/</span>
+                            <span>13</span>
+                            <button><</button>
+                            <button>></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping_contents">
+                    <div class="shopping_contents_b_wrap">
+                    <div class="shopping_contents_wrap_1">
+                        <div class="shopping_card_1">
+                            <a href="https://missu.co.kr//?cafe_mkt=ue_naveritem01&NaPm=ct%3Dlloqcpbk%7Cci%3Df069ac9d4fc4a2453dfe47bb4dec3a17c0675c0a%7Ctr%3Dsbsh%7Csn%3D4353450%7Cic%3D%7Chk%3D2ee618925d996ee4ecda6b3fe7513cd1a7a4762b">
+                            <img src="https://s.pstatic.net/shopping.phinf/20230823_25/3b486a77-f7d7-4d89-942f-091ce96eb007.jpg?type=f294_378"/>
+                            이렇게나 예뻐<br>
+                            이게 실화야?
+                            </a>
+                            </div>
+                        <div class="shopping_card_2">
+                            <a href="https://www.rurugold.com/shop/bestseller.html?xcode=BEST&ref=nshot01&da_ref=Yz00bnBRTHo=&NaPm=ct%3Dlloqd6ao%7Cci%3Dff5db71bfb9fef1bea11a7e747217faa775fe960%7Ctr%3Dsbsh%7Csn%3D120956%7Cic%3D%7Chk%3D9be42ed4b6c137d6270e5b8391ebf69f2ed443d1">
+                            <img src="https://s.pstatic.net/shopping.phinf/20230823_8/0eb574bb-16b0-453f-a7fa-2574376a7df8.jpg?type=f294_378"/>
+                            목걸이 실화야<br>
+                            3+1구매특가
+                            </a>
+                        </div>
+                        <div class="shopping_card_3">
+                            <a href="https://realcoco.com/?cafe_mkt=ntbox_c15&cafe_prdNo=21891#anchorBoxName_21891&_C_=335&BSCPN=BCTS&BSPRG=NSTP&BSCCN1=%20%20%20%20%20%20%20%20%20%20%20&NaPm=ct%3Dlloqdin4%7Cci%3D68f13fd1184598e804ba0edf0f332befcce4b30c%7Ctr%3Dsbsh%7Csn%3D308760%7Cic%3D%7Chk%3D7d08e0c36746dfd1db613dfb8629112ce514aec1">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230801_12/ca6840b2-bb7b-4e38-8a34-c1f6445853fe.jpg?type=f294_378"/>
+                            햐얀셔츠 대박<br>
+                            빛이난다빛!
+                            </a>
+                        </div>
+                        <div class="shopping_card_4">
+                            <a href="https://saintsatin.co.kr/product/detail.html?product_no=449&cafe_mkt=ue_box&NaPm=ct%3Dlloqdqcw%7Cci%3Dfb5f419eb8262b84ee44b73c7d9276caef261327%7Ctr%3Dsbsh%7Csn%3D5948814%7Cic%3D%7Chk%3D941fb4c0e73119313dc45d1214edc98764730965">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230802_0/95d61982-be16-40ae-9908-9245c2e717fb.jpg?type=f294_378"/>
+                            이렇게나 예뻐<br>
+                            이게 실화야?
+                            </a>
+                        </div>
+                        <div class="shopping_card_5">
+                            <a href="https://smartstore.naver.com/mihyangstore/products/8268248605?NaPm=ct%3Dlloqfbgg%7Cci%3Dc3f3db68c8fb6b6d2b8b6913458fa27ee3378883%7Ctr%3Dsbsh%7Csn%3D6577155%7Cic%3D%7Chk%3De9bed60c7845593b1e6173ae12d1f5922c4ad6fe">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230807_18/c8e2a8e0-c0a4-41b5-8a0a-a991a4b6d588.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                        </div>
+                        <div class="shopping_card_6">
+                            <a href="https://www.living25.co.kr/shop/shopdetail.html?branduid=10914929&da_ref=Yz1UWWRxbnk=&NaPm=ct%3Dlloqg7v4%7Cci%3Da883e582a57e6ab83dc344c7595c348825c0eac6%7Ctr%3Dsbsh%7Csn%3D5234634%7Cic%3D%7Chk%3D5543e02867424baa55e67b13a8281147fbcbae3a">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230801_9/9f5d8e71-40ce-4cdb-99fd-79ed7b07ff2e.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                            </div>
+                        <div class="shopping_card_7">
+                            <a href="https://clubclio.co.kr/shop/goodsView/0000004186?utm_source=naver&utm_medium=shoppingbox&utm_campaign=newmember&NaPm=ct%3Dlloqgzn4%7Cci%3D6cd038ccf0ec04ee6bb111b08389f04c3bdcac54%7Ctr%3Dsbsh%7Csn%3D11991%7Cic%3D%7Chk%3D25cad6e385d9b9c7f1d312ddd915a2e4bc592b96">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230821_1/084ed3c1-fda2-4768-a718-9d946aa62614.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                        </div>
+                        <div class="shopping_card_8">
+                            <a href="http://www.beststl.com/?da_ref=Yz1ZYkVDN1U=&ssrem=trend&ref=naverpick4&NaPm=ct%3Dlloqhl8w%7Cci%3D3a988199d985a32006bbd2a92b91a3811e3d6088%7Ctr%3Dsbsh%7Csn%3D6273%7Cic%3D%7Chk%3D4d533297e2040bd20f50f3168ef7c4336b95261d">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230818_18/cf60cd8b-ff76-47d8-9319-0af88bb95b2f.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                        </div>
+                        <div class="shopping_card_9">
+                            <a href="https://www.dewbell.co.kr/?cafe_mkt=ntbox_c01&NaPm=ct%3Dlloqibhc%7Cci%3Dbc29c2dab69ab868795022d917899157ce3717b1%7Ctr%3Dsbsh%7Csn%3D656646%7Cic%3D%7Chk%3De4c3c166fe35db5adb48d76b1bf6657dab5f6b9f">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230822_25/76365201-ac5b-4ad2-884d-24ac55bddf86.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                        </div>
+                        <div class="shopping_card_10">
+                            <a href="https://www.graychic.co.kr/?utm_source=hotitem1&utm_medium=banner&utm_campaign=hotitem1&NaPm=ct%3Dlloqj2hk%7Cci%3D8bf8e14d0d1b69b4692454f20f36f8bbb4ddf387%7Ctr%3Dsbsh%7Csn%3D190391%7Cic%3D%7Chk%3D7bd0eeb2488e7a3c146243a1bd3be34ed38bc423">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230822_9/86defee7-e945-43a5-9880-e0eba9f56222.jpg?type=f294_378"/>
+                        이렇게나 예뻐<br>
+                        이게 실화야?
+                            </a>
+                        </div>
+                    </div>
+                    <div class="shopping_contents_wrap_2">
+                        <div class="shopping_contents_brand">
+                            <span>쿠팡</span>
+                            <span>.</span>
+                            <span>G마켓</span>
+                            <span>.</span>
+                            <span>옥션</span>
+                            <span>.</span>
+                            <span>11번가</span>
+                            <span>.</span>
+                            <span>SGG닷컴</span>
+                            <span>.</span>
+                            <span>올리브영</span>
+                            <span>.</span>
+                            <span>위메프</span>
+                            <span>.</span>
+                            <span>GS샵</span>
+                            <span>.</span>
+                            <span>CJ온스타일</span>
+                            <span>.</span>
+                            <span>패션플러스</span>
+                            <span>.</span>
+                            <span>CJ더마켓</span>
+                        </div>
+                        <div class="shopping_contents_menu">
+                            <div>
+                                <img src="../picture/shopping_content/shopping_quick_shopping.png">
+                                <a href=""></a>
+                                <span>쇼핑홈</span>
+                            </div>
+                            <div>
+                                <img src="../picture/shopping_content/shopping_quick_deliver.png">
+                                <span>주문</span>
+                            </div>
+                            <div>
+                                <img src="../picture/shopping_content/shopping_quick_basket.png">
+                                <span>장바구니</span>
+                            </div>
+                            <div>
+                                <img src="../picture/shopping_content/shopping_quick_deliver.png">
+                                <span>주문</span>
+                            </div>
+                            
+                        </div>
+                        <div class="shopping_contents_preview_card">
+                            <a href="https://www.spa-r.com/product/detail.html?product_no=48&cafe_mkt=ncbox_a01&NaPm=ct%3Dllp6a42g%7Cci%3D3040d9461243c36b11368869b05ddd8a8d64067c%7Ctr%3Dsbsf%7Csn%3D7546594%7Cic%3D%7Chk%3D9ffdfc08e6c013ff43b07e571a1f4b3ecc1af957">
+                                <img src="https://s.pstatic.net/shopping.phinf/20230809_17/c0889ba8-208d-411c-8332-2b47aba8ae5c.jpg"/>
+                                <span>365일 매일매일 종아리 부수기</span></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="shopping_contents_list">
+                    <div class="shopping_contents_list_wrap">
+                        <button><</button>
+                        <span>쇼핑아이템</span>
+                        <span>더보기</span>
+                        <span>1</span>
+                        <span>/</span>
+                        <span>13</span>
+                        <button>></button>
+                    </div>
+                </div>
+            </div>
             <div class="etc_content"></div>
+            </div>
         </div>
         <div class="content_box_rightside">
             <div class="login_box">
@@ -266,8 +464,9 @@
                 <!-- https://ssl.pstatic.net/melona/libs/1456/1456269/cf48f96a131e9497902b_20230718100502473.jpg -->
         </div>
     </div>
+    <div class="footer">
 
-
+    </div>
 </body>
 <script src="./cardNews/cardnews.js"></script>
 

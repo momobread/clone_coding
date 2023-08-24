@@ -11,9 +11,13 @@
     --color_text : #909aab;
     --color_text_click : rgba(8,8,8,.5);
     --color_nav_bg :#f4f6fa;
+    --color_text2 : #dadcdf;
+
     
 }
 
+
+    
 /* .header_nav{
     display: flex;
     justify-content: space-between;
@@ -60,13 +64,15 @@
     width : 480px;
     outline : 0;
     font-size : 20px;
+    
+     
 }
-.header_search_line>input{
+/* .header_search_line>input{
     border: none;
     width : 480px;
     outline : 0;
     font-size : 20px;
-}
+} */
 
 
 .header_search_line{
@@ -75,10 +81,10 @@
     display: flex;
     justify-content: center;
     border-radius: 30px;
+   
     
-    
-
 }
+
 .header_search_line >span> img{
     width:24px;
     height: 24px;
@@ -119,7 +125,8 @@
 
 .content_box{
     width :1280px;
-    height: 1000px;
+    height: auto;
+    /* 여기뭐지? */
     /* background-color: var(--color_test);  */
     margin: 0 auto;
     display: flex;
@@ -158,12 +165,15 @@ width: 830px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    
+    
    
 }
 .news_content > div:nth-of-type(1),.news_content > div:nth-of-type(4){
  border-radius:10px;   
 }
 
+/*여기가 카드뉴스 부분 */
 
 .news_content_header{
    /* flex-grow: 1; */
@@ -172,13 +182,24 @@ width: 830px;
     height: 50px;
     display: flex;
     align-items: center;
+    position: relative;
   
   
 }
+
 .news_content_nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color_w);
     width:830px;
     height: 60px;
+    /* position: relative; */
+    /* top: 50px; */
+    position: relative;
+    /*     
+    z-index: 6; */ 
+     /* 여기가문제 */
   
 }
 .news_content_forms{
@@ -193,7 +214,7 @@ width: 830px;
     background-color: var(--color_border);
     width:830px;
     height: 60px;
-   
+    position: relative;
     
 }
 
@@ -307,6 +328,8 @@ width: 830px;
 }
 
 /* 여기가 뉴스스탠스 부분 */
+
+
 .news_list{
     position: absolute;
     width: 830px;
@@ -414,12 +437,18 @@ height: 20px;
 }
 
 
-.news_content_nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
+
+
+
+/* nav여러개 부분 */
+
+
+/* 부모를 기준으로 absolute되는데 
+부모를 뉴스 컨텐츠를 기준으로 잡아버리니까 깨짐 */
+/* 어떻게 해야될까? */
 .news_content_nav_wrap{
+    /* zindex제일높음 */
     display: flex;
     height: 50px;
     width: 790px;
@@ -427,14 +456,64 @@ height: 20px;
     border-radius: 7px;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+     z-index: 7; 
 
 }
 .news_content_nav_wrap>div:nth-child(-n+5){
     margin-right: 20px;
 }
 
+
+.news_content_nav_wrap2{
+    background-color: orange;
+    height: 50px;
+    width: 790px;
+    position: absolute;
+    z-index: 6;
+    top:20px;
+    left: 30px;
+   display: none;
+}
+
+.news_content_nav_wrap3{
+    background-color: yellow;
+    height: 50px;
+    width: 790px;
+    position: absolute;
+    z-index: 5;
+    top:30px;
+    left: 40px;
+    display: none;
+}
+
+.news_content_nav_wrap4{
+    background-color: greenyellow;
+    height: 50px;
+    width: 790px;
+    position: absolute;
+    z-index: 4;
+    top:40px;
+    left: 50px;
+    display: none;
+}
+
+.news_content_nav_wrap5{
+    background-color: skyblue;
+    height: 50px;
+    width: 790px;
+    position: absolute;
+    z-index: 3;
+    top:50px;
+    left: 60px;
+    display: none;
+}
+
+
 .news_content_nav_left{
     display: flex;
+    height: 30px;
+    align-items: center;
    
 }
 .news_content_nav_left>div:nth-child(1){
@@ -457,11 +536,313 @@ height: 20px;
 }
 
 .nav_scroll_container{
-    overflow: auto;
-    scroll-behavior: auto;
+    overflow: hidden;
+    scroll-behavior: smooth;
     height: 16px;
 
 }
 .nav_scroll_container::-webkit-scrollbar{
     display: none;
 }
+.nav_scroll_container > div:hover{
+    text-decoration: underline;
+
+}
+.nav_scroll_container > div{
+    height:30px ; 
+    /* 스크롤 한칸의 크기를 30px로 고정시킴 */
+    font-size: 15px;
+}
+
+/* list */
+
+
+.news_content_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/* shopping */
+.shopping_box{
+    margin-top: 15px;
+    border: 1px solid var(--color_border);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    height: 560px;
+    width: 830px;
+}
+.shopping_contents_list{
+    width: 830px
+}
+
+.shopping_nav_wrap,.shopping_small_nav_b_wrap,
+ .shopping_contents_b_wrap, .shopping_contents_list_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: inherit;
+    width: 790px;
+    
+}
+.shopping_nav{
+   
+    /* display: flex; */
+    height: 60px;
+    /* flex grow로 height를 하면 자식이 상속을 못받는다 */
+    /* flex-grow: 1; */
+    margin: 0 auto;
+}
+.shopping_nav_wrap > a:nth-of-type(n+2){
+    margin: 0 10px;
+    color: var(--color_text);
+    font-size:17px;
+    font-weight: 600;
+}
+.shopping_nav_wrap > a:nth-of-type(1){
+    margin-right: 10px;
+    color: var(--color_text);
+    font-size:17px;
+    font-weight: 600;
+}
+.shopping_nav_wrap >span:nth-of-type(-N+3) {
+    color: var(--color_text);
+    font-size:17px;
+    font-weight: 500;
+}
+.shopping_small_nav{
+    height: 60px;
+    margin: 0 auto;
+    
+  
+}
+/* .shopping_small_nav_b_wrap{
+    background-color: var(--color_w);
+} */
+.shopping_small_nav_wrap_1,.shopping_small_nav_wrap_2{
+  
+    height: inherit;
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+}
+
+.shopping_small_nav_wrap_1{
+    background-color: var(--color_border);
+    opacity: 0.8;
+    padding-left: 20px;
+    border-radius: 7px;
+
+}
+.shopping_small_nav_wrap_1>span:nth-of-type(-N+2){
+    font-weight: 600;
+    margin-right: 10PX;
+}
+.shopping_small_nav_wrap_2{
+    background-color: var(--color_w);
+    justify-content: flex-end;
+
+}
+.shopping_small_nav_wrap_2>span:nth-of-type(-n+3){
+    font-size: 12px;
+    
+  
+}
+.shopping_small_nav_wrap_2>span:nth-of-type(1){
+    font-weight: 600;
+}
+.shopping_small_nav_wrap_2>span:nth-of-type(n+3){
+    font-weight: 500;
+    color: var(--color_text);
+}
+.shopping_small_nav_wrap_2>span:nth-of-type(3){
+    margin-right: 10px;
+}
+.shopping_small_nav_wrap_2>button:nth-of-type(-n+2){
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color_border);
+    background-color: var(--color_w);
+    border-radius: 5px;
+}
+/* {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} */
+.shopping_contents{
+    /* background-color: var(--color_text); */
+    height: 380px;
+    margin: 0 auto;
+}
+
+.shopping_contents_list{
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid var(--color_border);
+    border-end-end-radius: 7px;
+    border-end-start-radius: 7px;
+}
+
+.shopping_contents_b_wrap{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.shopping_contents_wrap_1>div>a>img{
+    width:98px;
+    height: 126px;
+    border-radius: 7px;
+}
+.shopping_contents_wrap_1{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-grow: 2; */
+    max-width: 520px;
+    max-height: 375px;
+    gap : 5px;
+}
+
+.shopping_contents_wrap_1>div>a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 15px;
+    color:black;
+}
+.shopping_contents_wrap_1>div>a:visited{
+    color:black;
+}
+
+.shopping_contents_list_wrap{
+    justify-content: center;
+}
+.shopping_contents_list_wrap > span:nth-of-type(-n+2){
+    margin: 5px;
+}
+.shopping_contents_list_wrap > span:nth-of-type(1){
+  color : #9858f5;
+}
+.shopping_contents_list_wrap>button{
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid var(--color_text2);
+}
+
+.shopping_contents_wrap_2{
+    display: flex;
+    flex-direction: column;
+     background-color: var(--color_w);
+     max-width: 250px;
+     height: 375px;
+     justify-content: space-evenly;
+    
+   
+ }
+.shopping_contents_brand,.shopping_contents_menu{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    background-color: var(--color_gray);
+    border-radius: 5px;
+    border: 1px solid var(--color_border);
+}
+
+
+.shopping_contents_preview_card{
+    display: flex;
+    /* flex-grow: 2; */
+    flex-wrap: wrap;
+    border: 1px solid var(--color_border);
+    border-radius: 5px;
+    justify-content: center;
+  
+}
+.shopping_contents_preview_card>a{
+    display: flex;
+    flex-direction: column;
+}
+.shopping_contents_preview_card>a>img{
+    width: 230px;
+    height: 145px;
+}
+.shopping_contents_menu{
+    justify-content: center;
+
+}
+.shopping_contents_menu>div{
+    width: 55px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.shopping_contents_menu>div>img{
+    width: 32px;
+    height: 32px;
+    border-radius: 25px;
+    border: 1px solid var(--color_border);  
+}
+.shopping_contents_menu>div>span{
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 3px;
+}
+.shopping_contents_brand >span:nth-of-type(2N+1){
+    color: black;
+    opacity: 0.8;
+    font-weight: 500;
+    margin: 0 5px;
+    
+}
+.shopping_contents_brand >span:nth-of-type(2N){
+    color: var(--color_text2);
+    margin: 0 5px;
+}
+
+
+/* footer부분*/
+.footer{
+    height:300px;
+
+}
+/* 아이폰 12pro */
+/* @media (max-width : 843px){
+    body{
+        height: 900px;
+        
+    }
+    .news_content{
+        height: 70%;
+        display: flex;
+    }
+    .header{
+        height: 15%;
+        display: flex;
+    }
+    .footer{
+        height: 15%;
+        display: flex;
+    }
+   #ad_content >img{
+    max-width: 100%;
+   }
+    .header_nav{
+        max-height: 70%;
+    }   
+
+
+
+   .header_icon >div>img{
+    max-width: 5%;
+   }
+
+    } */
+
