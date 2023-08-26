@@ -27,6 +27,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .header_nav>span ,.hearer_nav_right_set>span{
     display: flex;
     width:46px;
@@ -125,7 +126,7 @@
 
 .content_box{
     width :1280px;
-    height: auto;
+    /* height: auto; */
     /* 여기뭐지? */
     /* background-color: var(--color_test);  */
     margin: 0 auto;
@@ -135,6 +136,7 @@
 .content_box_leftside{
     display: flex;
     flex-direction: column;
+
     /* background-color: var(--color_test); */
 }
 .ad_content{
@@ -291,6 +293,7 @@ width: 830px;
 .small_ad{
     border: 1px solid var(--color_border);
     border-radius: 10px;
+
 }
 
 
@@ -713,6 +716,7 @@ height: 20px;
     flex-direction: column;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 400;
     color:black;
 }
 .shopping_contents_wrap_1>div>a:visited{
@@ -808,10 +812,104 @@ height: 20px;
 }
 
 
+.etc_content{
+    width: 830px;
+    background-color: var(--color_test);
+    margin-top: 15px;
+    border-radius: 7px;
+}
+.etc_content_mini_card{
+    display: flex;
+    flex-direction: column;
+
+}
+.content_box_rightside{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.etc_content_nav{
+    height: 55px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.etc_content_nav_wrap>a{
+    font-size: 16.5px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.etc_content_nav_wrap>a:visited{
+    color: var(--color_text);
+}
+
+
+
+.etc_content_nav_wrap>span{
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--color_text);
+
+}
+
+.etc_content_nav_wrap{
+    width: 790px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.etc_content_card>div>a>img{
+    width: 250px;
+    height: 140px;
+    border: 1px solid var(--color_border);
+    border-radius: 7px;
+}
+
+
+.etc_content_card{
+    display: flex;
+    justify-content: center;
+    gap : 20px;
+}
+.etc_content_card>div>a>div{
+    margin-bottom: 5px;
+}
+.etc_content_card>div>a{
+    text-decoration: none;
+}
+.etc_content_card>div>a:visited{
+    color: black;
+}
+.card_cars_title{
+    color :#2981db;
+    font-weight: 600;
+    font-size: 14px;
+}
+.etc_content_card>div>a>div:nth-of-type(2):hover{
+    text-decoration: underline;
+}
+.etc_content_card>div>a>div:nth-of-type(2){
+    font-weight: 600;
+    font-size: 15.5px;
+}
+.etc_content_card>div>a>div:nth-of-type(3){
+    font-weight: 500;
+    opacity: 0.7;
+
+}
+/* .etc_content_card{
+  
+
+} */
+
 /* footer부분*/
 .footer{
     height:300px;
-
 }
 /* 아이폰 12pro */
 /* @media (max-width : 843px){
@@ -845,4 +943,3 @@ height: 20px;
    }
 
     } */
-
